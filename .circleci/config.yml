@@ -4,6 +4,12 @@ version: 2.1
 orbs:
   # Declare a dependency on the welcome-orb
   welcome: circleci/welcome-orb@0.4.1
+  # Add yarn
+  yarn: substantial/yarn@3.10.2
+  
+commands:
+  install:
+    description: "yarn install"
   
 # Orchestrate or schedule a set of jobs
 workflows:
