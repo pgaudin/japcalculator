@@ -33,6 +33,9 @@ export const FoodTile: React.FC<Props> = (props: Props) => {
     if (onChange) {
       onChange(value);
     }
+    if (value%5 === 0 && value !== 0) {
+        window.alert("Aqh le régime");
+    }
   };
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
