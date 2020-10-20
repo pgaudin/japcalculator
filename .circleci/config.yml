@@ -42,6 +42,8 @@ jobs:
       
       # fix
       # - run: npx yarn-audit-fix
+      
+      - run: yarn run eslint ./src/App.tsx
 
       # build app
       - run: yarn build
