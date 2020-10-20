@@ -8,14 +8,10 @@ orbs:
 jobs:
   audit:
     steps:
-      - run:
-        name: audit
-        command: yarn audit
+      - run: yarn audit
   fix:
     steps:
-      - run:
-        name: fix
-        command: npx yarn-fix-audit
+      - run: npx yarn-fix-audit
 
 # Orchestrate or schedule a set of jobs
 workflows:
