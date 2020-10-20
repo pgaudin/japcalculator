@@ -38,10 +38,10 @@ jobs:
       - run: yarn test
       
       # look for packages dependencies issues
-      - run: yarn audit
+      # - run: yarn audit
       
       # fix
-      - run: npx yarn-audit-fix
+      # - run: npx yarn-audit-fix
 
       # build app
       - run: yarn build
