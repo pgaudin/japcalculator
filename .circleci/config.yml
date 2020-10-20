@@ -12,13 +12,3 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
-      
- commands:
-  audit:
-    description: "Packages dependencies check"
-    steps:
-      - run: yarn audit
-  fix:
-    description: "Packages dependencies fix"
-    steps:
-      - run: npx yarn-audit-fix
