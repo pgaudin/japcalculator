@@ -4,8 +4,7 @@ version: 2.1
 orbs:
   # Declare a dependency on the welcome-orb
   welcome: circleci/welcome-orb@0.4.1
-  audit: yarn audit
-  fix: npx yarn-audit-fix
+  
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
@@ -13,5 +12,13 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
-      - audit/run
-      - fix/run
+      
+ commands:
+  audit:
+    description: "Packages dependencies check"
+    steps:
+      - run: yarn audit
+  fix:
+    description: "Packages dependencies fix"
+    steps:
+      - run: npx yarn-audit-fix
