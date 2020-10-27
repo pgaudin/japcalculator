@@ -1,5 +1,5 @@
 exports.handler = async function(event, context) {
-    if (event.queryStringParameters !== {}) {
+    if (event.queryStringParameters.message !== "") {
         return {
             statusCode: 200,
             body: JSON.stringify(event.queryStringParameters.message)
